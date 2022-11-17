@@ -1,0 +1,42 @@
+    alert("Digite '1' ou '2' para responder as perguntas");
+    
+    // Pergunta 1
+    const q1 = prompt("Em qual área você pretende seguir? Digite (1) para Front-End ou (2) para Back-End?");
+  
+    // Pergunta 2
+    if(q1 == 1){
+    const q2 = prompt("Pretende aprender (1) React ou  (2)Vue?");
+    }
+    else if(q1 == 2){
+    const q2 = prompt("Pretende aprender (1) C# ou (2) Java?");
+    } 
+    
+    // Pergunta 3
+    const q3 = prompt("Você pensa em (1) Seguir se especializando na área ou (2) Tornar-se um desenvolvedor Fullstack?")      
+    
+    // Pergunta 4
+    const q4 = prompt("Quais são as tecnologias em que pretende se especializar? Digite em texto.");
+
+    // Pergunta 5
+    const q5 = prompt("Deseja inserir mais alguma tecnologia? Digite 's' para Sim ou 'n' para Não ");
+
+    // Loop
+    while(q5 == "S" || q5 == "s"){ 
+        const q4 = prompt("Qual outra tecnologia em que pretende se especializar? Digite em texto.");
+        const q5 = prompt("Deseja inserir mais alguma tecnologia? Digite 's' para Sim ou 'n' para Não ");
+        if(q5 == "N" || q5 == 'n'){
+            break;
+        }
+    }
+    
+    alert("A linguagem " + q4 + " é muito legal!");
+    alert("Agradecemos por responder nossa pesquisa!");
+  
+
+   
+
+
+
+
+
+
