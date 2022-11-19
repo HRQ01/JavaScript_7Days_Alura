@@ -1,0 +1,75 @@
+// Arrays 
+let arrayFrutas = [];
+let arrayVegetais = [];
+let arrayLaticinios = [];
+let arrayAlmocoJantar = [];
+let arraySobremesas = [];
+let arrayBebidas = [];
+
+alert("Bem-vindo ao mercado Municipal!" + "\n" + "Insira seus produtos na lista de compras!");
+
+for(i = 0; i < 2; i++){
+
+    // Questão 1
+    const item = prompt("Digite o item que deseja inserir na lista.");
+    const q1 = prompt("A qual categoria pertence esse produto - " + item + " ?"
+    + "\n" + "Digite o número correspondente a categoria:"
+    + "\n" + "(1) Frutas"
+    + "\n" + "(2) Vegetais"
+    + "\n" + "(3) Laticínios" 
+    + "\n" + "(4) Almoço / Jantar"
+    + "\n" + "(5) Sobremesas"
+    + "\n" + "(6) Bebidas");
+        
+        if(q1 == 1){
+            arrayFrutas.push(item);
+        }
+        
+        if(q1 == 2){
+            arrayVegetais.push(item);
+        }
+
+        if(q1 == 3){
+            arrayLaticinios.push(item);
+        }
+
+        if(q1 == 4){
+            arrayAlmocoJantar.push(item);
+        }
+
+        if(q1 == 5){
+            arraySobremesas.push(item);
+        }
+        
+        if(q1 == 6){
+            arrayBebidas.push(item);
+        }
+        
+        if (q1 > 6) {
+            alert("Valor inválido!! Digite um número de 1 a 6!");
+            i=0;
+        }
+
+        const q2 = prompt("Deseja inserir mais algum produto? Responda 's' para SIM ou qualquer outra tecla para NÃO.");
+            if(q2 == 's' || q2 == 'S'){
+                i = 0;
+            }               
+                else
+                    { 
+                i = 1;
+            }
+        }
+
+        
+    alert("Aqui está a sua lista de compras!!" + "\n" 
+    + "Frutas: " + arrayFrutas.join(", ") + "\n"
+    + "Vegetais: " + arrayVegetais.join(", ") + "\n"
+    + "Laticínios: " + arrayLaticinios.join(", ") + "\n"
+    + "Almoço / Jantar: " + arrayAlmocoJantar.join(", ") + "\n"
+    + "Sobremesas: " + arraySobremesas.join(", ") + "\n"
+    + "Bebidas: " + arrayBebidas.join(", ")
+    );
+
+ 
+
+ 
