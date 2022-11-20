@@ -1,0 +1,130 @@
+// Arrays 
+let arrayFrutas = [];
+let arrayVegetais = [];
+let arrayLaticinios = [];
+let arrayAlmocoJantar = [];
+let arraySobremesas = [];
+let arrayBebidas = [];
+
+alert("Bem-vindo ao mercado Municipal!" + "\n" + "Insira seus produtos na lista de compras!");
+
+for(i = 0; i < 2; i++){
+
+    // Questão 1
+    const item = prompt("Digite o item que deseja inserir na lista.");
+    const q1 = prompt("A qual categoria pertence esse produto - " + item + " ?"
+    + "\n" + "Digite o número correspondente a categoria:"
+    + "\n" + "(1) Frutas"
+    + "\n" + "(2) Vegetais"
+    + "\n" + "(3) Laticínios" 
+    + "\n" + "(4) Almoço / Jantar"
+    + "\n" + "(5) Sobremesas"
+    + "\n" + "(6) Bebidas");
+        
+        if(q1 == 1){
+            arrayFrutas.push(item);
+        }
+        
+        if(q1 == 2){
+            arrayVegetais.push(item);
+        }
+
+        if(q1 == 3){
+            arrayLaticinios.push(item);
+        }
+
+        if(q1 == 4){
+            arrayAlmocoJantar.push(item);
+        }
+
+        if(q1 == 5){
+            arraySobremesas.push(item);
+        }
+        
+        if(q1 == 6){
+            arrayBebidas.push(item);
+        }
+        
+        if (q1 > 6) {
+            alert("Valor inválido!! Digite um número de 1 a 6!");
+            i=0;
+        }
+
+        const q2 = prompt("Deseja inserir mais algum produto? Responda 's' para SIM ou qualquer outra tecla para NÃO.");
+            if(q2 == 's' || q2 == 'S'){
+                i = 0;
+            }               
+                else
+                    { 
+                i = 1;
+            }
+            showList();
+}
+
+
+for (j = 0; j < 2; j++){
+
+        const q3 = prompt("Deseja excluir algum produto da lista ? Responda 's' para SIM ou qualquer outra tecla para NÃO.");
+
+        if(q3 == "s" || q3 =="S"){
+            const defineItem = prompt(`Digite o item que deseja excluir !\n Frutas: ${arrayFrutas}\n Vegetais: ${arrayVegetais}\n Laticinios: ${arrayLaticinios}\n Aloço / Jantar: ${arrayAlmocoJantar}\n Sobremesas: ${arraySobremesas}\n Bebidas: ${arrayBebidas}\n`);
+            
+                if(arrayFrutas.includes(defineItem) == true){
+                const posItem = arrayFrutas.indexOf(defineItem);
+                const delItem = arrayFrutas.splice(posItem, 1);
+                }
+
+                else if(arrayVegetais.includes(defineItem) == true){
+                    const posItem = arrayVegetais.indexOf(defineItem);
+                    const delItem = arrayVegetais.splice(posItem, 1);
+                }
+
+                else if(arrayLaticinios.includes(defineItem) == true){
+                    const posItem = arrayLaticinios.indexOf(defineItem);
+                    const delItem = arrayLaticinios.splice(posItem, 1);
+                }
+
+                else if(arrayAlmocoJantar.includes(defineItem) == true){
+                    const posItem = arrayAlmocoJantar.indexOf(defineItem);
+                    const delItem = arrayAlmocoJantar.splice(posItem, 1);
+                }
+
+                else if(arraySobremesas.includes(defineItem) == true){
+                    const posItem = arraySobremesas.indexOf(defineItem);
+                    const delItem = arraySobremesas.splice(posItem, 1);
+                }
+
+                else if(arrayBebidas.includes(defineItem) == true){
+                    const posItem = arrayBebidas.indexOf(defineItem);
+                    const delItem = arrayBebidas.splice(posItem, 1);
+                }
+
+                else {
+                    alert("Item não encontrado");
+                    j=0;
+                }            
+
+            }
+            else {
+                j =1;
+            }
+       
+
+        showList();
+
+}
+
+//Funções ----------------------------------------------------------------------------------------
+
+        function showList(){
+            alert("Aqui está a sua lista de compras!!" + "\n" 
+            + "Frutas: " + arrayFrutas.join(", ") + "\n"
+            + "Vegetais: " + arrayVegetais.join(", ") + "\n"
+            + "Laticínios: " + arrayLaticinios.join(", ") + "\n"
+            + "Almoço / Jantar: " + arrayAlmocoJantar.join(", ") + "\n"
+            + "Sobremesas: " + arraySobremesas.join(", ") + "\n"
+            + "Bebidas: " + arrayBebidas.join(", ") );
+        }
+ 
+
+ 
