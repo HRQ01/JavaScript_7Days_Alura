@@ -1,0 +1,83 @@
+let tpCalc;
+let n1;
+let n2;
+let calcular;
+let novoCalc;
+
+boasVindas();
+
+for(i = 0; i < 2; i++) {
+
+    tpOperacao(); 
+    inserirValores();
+    calculo();
+    novoCalculo();
+
+            
+        if (novoCalc == "s"){
+            i=0;
+        }
+         
+        else {   
+            alert("Tchau, tchau !!");
+            i=1;
+        }
+}
+
+
+// Funções -------------------------------------------------------------------------------------------------------------------
+
+function boasVindas(){
+    alert("Bem-Vindo a calculadora do projeto #7DaysOfCode\n"); 
+}
+
+function tpOperacao(){
+    tpCalc = prompt("Qual operação matemática gostaria de realizar?\nDigite:\n(so) para SOMA\n(su) para SUBTRAÇÃO\n(mu) para MULTIPLICAÇÃO\n(di) para DIVISÂO");
+
+    while(tpCalc != "so" && tpCalc !="su" && tpCalc !="mu" && tpCalc !="di" && tpCalc !="s"){ 
+        alert("Operação não Reconhecida!");
+    
+        tpCalc = prompt("Qual operação matemática gostaria de realizar?\nDigite:\n(SO) para SOMA\n(SU) para SUBTRAÇÃO\n(MU) para MULTIPLICAÇÃO\n(DI) para DIVISÂO");
+    }
+
+}
+
+function inserirValores(){
+    n1 = prompt("Insira o PRIMEIRO NÚMERO.");
+    n2 = prompt("Insira o SEGUNDO NÚMERO.");
+}
+
+function calculo(){
+    switch(tpCalc){
+        case 'so':
+            calcular = Number(n1) + Number(n2);
+            alert("Resultado da SOMA " + n1 + " + " + n2 + " = " + calcular);
+        break;
+
+        case 'su':
+            calcular = Number(n1) - Number(n2);
+            alert("Resultado da SUBTRAÇÃO " + n1 + " - " + n2 + " = " + calcular);
+        break;
+        
+        case 'mu':
+            calcular = Number(n1) * Number(n2);
+            alert("Resultado da MULTIPLICAÇÃO " + n1 + " x " + n2 + " = " + calcular);
+        break;
+
+        case 'di':
+            calcular = Number(n1) / Number(n2);
+            alert("Resultado da DIVISÃO " + n1 + " / " + n2 + " = " + calcular);
+        break;
+
+        }
+    }
+
+function novoCalculo(){
+    novoCalc = prompt("Deseja realizar um novo Calculo?\nDigite (s) para SIM ou (n) para NÂO.");
+
+    while (novoCalc !="s" && novoCalc !="n"){
+        alert("Operação Inválida !");
+        novoCalc = prompt ("Deseja realizar um novo Calculo?\nDigite (s) para SIM ou (n) para NÂO.")
+    }   
+}
+
